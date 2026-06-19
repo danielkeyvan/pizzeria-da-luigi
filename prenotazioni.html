@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenotazioni - Pizzeria da Luigi a Treviso</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-pizza-slice"></i>
+                <span>Pizzeria da Luigi</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="index.html#gallery">Galleria</a></li>
+                <li><a href="index.html#about">Chi Siamo</a></li>
+                <li><a href="index.html#info">Info</a></li>
+                <li><a href="prenotazioni.html" class="btn-primary">Prenota</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Header -->
+    <section class="booking-header">
+        <div class="container">
+            <h1>Prenota il Tuo Tavolo</h1>
+            <p>Garantisci il tuo tavolo presso Pizzeria da Luigi - Via Calmaggiore 21, Treviso</p>
+        </div>
+    </section>
+
+    <!-- Main Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-grid">
+                <!-- Booking Form -->
+                <div class="booking-form-container">
+                    <h2>Compila il Modulo di Prenotazione</h2>
+                    
+                    <form id="bookingForm" class="booking-form">
+                        <!-- Personal Information -->
+                        <fieldset>
+                            <legend>Informazioni Personali</legend>
+                            
+                            <div class="form-group">
+                                <label for="nome">Nome *</label>
+                                <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cognome">Cognome *</label>
+                                <input type="text" id="cognome" name="cognome" placeholder="Il tuo cognome" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" placeholder="tua@email.com" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="telefono">Telefono *</label>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="+39 123 456 7890" required>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Booking Details -->
+                        <fieldset>
+                            <legend>Dettagli Prenotazione</legend>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="data">Data *</label>
+                                    <input type="date" id="data" name="data" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="ora">Orario *</label>
+                                    <select id="ora" name="ora" required>
+                                        <option value="">Seleziona un orario</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="12:30">12:30</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="13:30">13:30</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="18:30">18:30</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="19:30">19:30</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="20:30">20:30</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="21:30">21:30</option>
+                                        <option value="22:00">22:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="persone">Numero di Persone *</label>
+                                    <select id="persone" name="persone" required>
+                                        <option value="">Seleziona il numero</option>
+                                        <option value="1">1 Persona</option>
+                                        <option value="2">2 Persone</option>
+                                        <option value="3">3 Persone</option>
+                                        <option value="4">4 Persone</option>
+                                        <option value="5">5 Persone</option>
+                                        <option value="6">6 Persone</option>
+                                        <option value="7">7 Persone</option>
+                                        <option value="8">8 Persone</option>
+                                        <option value="9">9 Persone</option>
+                                        <option value="10">10+ Persone</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="tavolo">Preferenza Tavolo</label>
+                                    <select id="tavolo" name="tavolo">
+                                        <option value="">Non specificata</option>
+                                        <option value="interno">Interno</option>
+                                        <option value="esterno">Esterno (stagione permettendo)</option>
+                                        <option value="vicino_finestra">Vicino la finestra</option>
+                                        <option value="tranquillo">Posto tranquillo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Additional Information -->
+                        <fieldset>
+                            <legend>Informazioni Aggiuntive</legend>
+                            
+                            <div class="form-group">
+                                <label for="occasione">Occasione Speciale (Opzionale)</label>
+                                <select id="occasione" name="occasione">
+                                    <option value="">Nessuna</option>
+                                    <option value="compleanno">Compleanno</option>
+                                    <option value="anniversario">Anniversario</option>
+                                    <option value="fidanzamento">Fidanzamento</option>
+                                    <option value="festa">Festa</option>
+                                    <option value="riunione_affari">Riunione d'affari</option>
+                                    <option value="altro">Altro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="note">Note Speciali (Opzionale)</label>
+                                <textarea id="note" name="note" placeholder="Es: Allergie, preferenze, comunicazioni speciali..." rows="4"></textarea>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <label>
+                                    <input type="checkbox" id="termini" name="termini" required>
+                                    <span>Accetto i termini e le condizioni di prenotazione *</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <button type="submit" class="btn btn-primary btn-large">Conferma Prenotazione</button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <div class="success-content">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Prenotazione Confermata!</h3>
+                            <p>Grazie per la tua prenotazione. Riceverai una conferma via email entro pochi minuti.</p>
+                            <p class="booking-reference">Numero di Conferma: <strong id="confirmNumber"></strong></p>
+                            <a href="index.html" class="btn btn-secondary">Torna alla Home</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Info Sidebar -->
+                <div class="booking-info">
+                    <div class="info-card">
+                        <h3>Informazioni Importanti</h3>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Ubicazione</h4>
+                                <p><strong>Via Calmaggiore 21</strong></p>
+                                <p>31100 Treviso, Italy</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Orari di Apertura</h4>
+                                <p>Lunedì - Giovedì: 12:00 - 22:00</p>
+                                <p>Venerdì - Sabato: 12:00 - 23:00</p>
+                                <p>Domenica: 12:00 - 21:00</p>
+                                <p class="note-small"><strong>Chiuso:</strong> Martedì</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Numero di Posti</h4>
+                                <p>Fino a 50 persone</p>
+                                <p>Per gruppi più grandi contattaci direttamente</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h4>Politica di Cancellazione</h4>
+                                <p>Cancellazione gratuita fino a 24 ore prima</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Contattaci Direttamente</h4>
+                                <p>Telefono: <a href="tel:+39042212345">+39 0422 123 456</a></p>
+                                <p>Email: <a href="mailto:info@pizzeriadaluigi.it">info@pizzeriadaluigi.it</a></p>
+                                <p>WhatsApp: <a href="https://wa.me/390422123456">Invia messaggio</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="features-card">
+                        <h3>I Nostri Vantaggi</h3>
+                        <ul class="features-list">
+                            <li><i class="fas fa-utensils"></i> Menu Completo Visibile Online</li>
+                            <li><i class="fas fa-leaf"></i> Ingredienti 100% Naturali</li>
+                            <li><i class="fas fa-fire"></i> Forno a Legna Tradizionale</li>
+                            <li><i class="fas fa-wine-glass"></i> Vini Selezionati</li>
+                            <li><i class="fas fa-star"></i> Ambiente Accogliente</li>
+                            <li><i class="fas fa-smile"></i> Staff Cordiale e Preparato</li>
+                            <li><i class="fas fa-parking"></i> Parcheggio Privato</li>
+                            <li><i class="fas fa-wifi"></i> WiFi Gratuito</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Domande Frequenti</h2>
+            <p class="section-subtitle">Risposte alle domande più comuni</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Posso modificare la mia prenotazione?</h4>
+                    <p>Sì, contattaci almeno 24 ore prima della prenotazione per qualsiasi modifica. Puoi chiamarci al +39 0422 123 456.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Offrite catering?</h4>
+                    <p>Sì! Offriamo servizi di catering personalizzati per eventi e riunioni. Contattaci direttamente per discussioni specifiche.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Qual è la politica di cancellazione?</h4>
+                    <p>Le cancellazioni sono gratuite fino a 24 ore prima della prenotazione. Cancellazioni entro 24 ore possono essere soggette a commissioni.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Accettate prenotazioni di grandi gruppi?</h4>
+                    <p>Sì, accettiamo gruppi fino a 50 persone. Per gruppi più grandi, vi preghiamo di contattarci in anticipo al +39 0422 123 456.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Avete opzioni per persone con allergie?</h4>
+                    <p>Assolutamente! Nel form di prenotazione puoi indicare qualsiasi allergia. Il nostro staff sarà preparato per gestirle correttamente.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Offrite servizi di consegna a domicilio?</h4>
+                    <p>Sì, offriamo consegna a domicilio. Per ordini di asporto o consegna, chiama direttamente +39 0422 123 456.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Hai Domande?</h2>
+            <p>Non esitare a contattarci direttamente</p>
+            <div class="cta-buttons">
+                <a href="tel:+39042212345" class="btn btn-primary">
+                    <i class="fas fa-phone"></i> Chiamaci Ora
+                </a>
+                <a href="mailto:info@pizzeriadaluigi.it" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Invia Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Pizzeria da Luigi</h4>
+                    <p>Le migliori pizze autentiche da oltre 40 anni a Treviso</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Link Rapidi</h4>
+                    <ul>
+                        <li><a href="index.html#menu">Menu</a></li>
+                        <li><a href="index.html#about">Chi Siamo</a></li>
+                        <li><a href="prenotazioni.html">Prenotazioni</a></li>
+                        <li><a href="index.html#info">Info Complete</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <p><strong>Via Calmaggiore 21</strong></p>
+                    <p>31100 Treviso, Italy</p>
+                    <p><strong>Tel:</strong> +39 0422 123 456</p>
+                    <p><strong>Email:</strong> info@pizzeriadaluigi.it</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Seguici</h4>
+                    <p>Rimani aggiornato con le nostre offerte speciali</p>
+                    <form class="newsletter" id="newsletterForm">
+                        <input type="email" placeholder="La tua email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pizzeria da Luigi - Via Calmaggiore 21, Treviso. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="js/reservations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
